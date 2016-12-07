@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
@@ -22,7 +23,6 @@ namespace IMDBWCF
 
         public Film GetFilmBySearch(string text)
         {
-            //var text = Request.Content.ReadAsStringAsync();
             var film = FilmsModel.Search(text);
             if (film == null)
             {
